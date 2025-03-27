@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <h3>Usuari connectat: <span th:text="${users.usuari}"></span></h3>
+
+    <center>
+        <H1>Llista d'opcions</H1>
+        <p><a href="consulta">Consulta la llista de llibres</a></p>
+        <p><a href="inserir">Insereix un nou llibre</a></p>
+        <p><a href="cercaid">Cerca un llibre per id</a></p>
+
+        <form action="/logout" method="post">
+            <input type=submit name="submit" value="Sortir">
+        </form>
+    </center>
+</body>
+
+</html>

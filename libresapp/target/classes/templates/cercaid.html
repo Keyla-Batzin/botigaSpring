@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Cerca de llibre per id</h1>
+        <form action="/cercaid" method="post">
+            Id del Llibre: <input type="text" name="idLlibre"><br><br>
+            <input type=submit name="submit" value="Cerca">
+        </form>
+        <br></br>
+
+        <div th:if="${llibreErr}">
+            <p th:text="${message}">
+                </td>
+        </div>
+
+        <table th:if="${!llibreErr}" border=1>
+            <thead>
+                <tr>
+                    <th>IdLlibre</th>
+                    <th>Títol</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Data d'edició</th>
+                    <th>Temàtica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td><span th:text="${llibre.idLlibre}"></span></td>
+                <td><span th:text="${llibre.titol}"></span></td>
+                <td><span th:text="${llibre.autor}"></span></td>
+                <td><span th:text="${llibre.editorial}"></span></td>
+                <td><span th:text="${llibre.datapublicacio}"></span></td>
+                <td><span th:text="${llibre.tematica}"></span></td>
+            </tbody>
+        </table>
+        <p><a href="/index">Tornar enrere</a></p>
+    </center>
+
+</body>
+
+</html>

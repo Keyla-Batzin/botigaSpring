@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE books (
+    id_llibre BIGINT AUTO_INCREMENT PRIMARY KEY,
+    titol VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    editorial VARCHAR(255) NOT NULL,
+    isbn VARCHAR(20) NOT NULL UNIQUE,
+    data_publicacio DATE NOT NULL,
+    tematica VARCHAR(255) NOT NULL
+);
